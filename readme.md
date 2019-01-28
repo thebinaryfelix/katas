@@ -13,3 +13,5 @@ This is a repository for storing my own solutions of some katas. Most challenges
 ### Who am I? :eyes:
 
 My name is [Mateus Félix](https://www.linkedin.com/in/mateusfelix/) and I've been working at [Ironhack - Global Coding School](https://www.ironhack.com/en) as a teaching assistant on the Web Development course in São Paulo, Brazil. Previous to that, I coursed Physics for 3 years and dropped out to course Computer Engineering for 1 year.
+
+Why is my username "thebinaryfelix"? Because I'm a big fan of [Mass Effect](https://www.masseffect.com/) and one of the missions is on a facility called "Binary Helix", you got it...
