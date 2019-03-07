@@ -1,6 +1,6 @@
 // https://www.codewars.com/kata/remove-zeros
 
-const removeZeros = array => {
+const removeZeros = (array) => {
   if (array.length === 0) return array;
   let elementToAdd;
   let loopNumber = 0;

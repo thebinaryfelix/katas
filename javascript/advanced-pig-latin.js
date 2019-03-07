@@ -1,10 +1,10 @@
 // https://www.codewars.com/kata/advanced-pig-latin
 
-const translate = sentence => {
+const translate = (sentence) => {
   // Extract words and punctuation to an array
   const sentenceWords = sentence.match(/(\w+)|(\W)/g);
   // Iterate over each word in the original array
-  let newSentenceWords = sentenceWords.map(word => {
+  const newSentenceWords = sentenceWords.map((word) => {
     let countVogal = 0;
     let countConsonants = 0;
     // Check if element is really a word and not punctuation
@@ -12,7 +12,7 @@ const translate = sentence => {
       // Split characters
       word = word.split('');
       // Iterate over each character
-      word.forEach(char => {
+      word.forEach((char) => {
         // If the character is not a vogal
         if (!char.match(/([aeiou])|([AEIOU])/g) && countVogal === 0) {
           // Push the char to the end of the array

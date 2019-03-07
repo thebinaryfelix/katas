@@ -4,11 +4,11 @@ const nbaCup = (resultSheet, toFind) => {
   const games = resultSheet.split(',');
   const resultsByGame = [];
 
-  const parseGame = game => {
+  const parseGame = (game) => {
     let score = {};
     let gameSplited = game.split(' ');
     let team = '';
-    gameSplited.forEach(string => {
+    gameSplited.forEach((string) => {
       if (isNaN(string)) {
         team += `${string} `;
       } else {
@@ -20,10 +20,10 @@ const nbaCup = (resultSheet, toFind) => {
   };
 
   const getTeamResults = (results, teamName) => {
-    return results.filter(result => result[teamName]).map(res => {
+    return results.filter(result => result[teamName]).map((res) => {
       const result = [];
       // Transform the result object in an array
-      Object.keys(res).forEach(key => {
+      Object.keys(res).forEach((key) => {
         result.push(key);
         result.push(res[key]);
       });

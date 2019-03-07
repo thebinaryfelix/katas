@@ -1,6 +1,6 @@
 // https://www.codewars.com/kata/reordering
 
-const reOrdering = text => {
+const reOrdering = (text) => {
   const textArr = text.split(' ');
   for (let i = 0; i < textArr.length; i += 1) {
     const isUpperCase = textArr[i].match(/[A-Z]/g);

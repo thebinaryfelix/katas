@@ -2,14 +2,15 @@
 
 const frame = (stringList, char) => {
   let biggestLength = 0;
-  stringList.forEach(word => {
+  stringList.forEach((word) => {
     if (word.length > biggestLength) {
       biggestLength = word.length;
     }
   });
-  const newStringList = stringList.map(word => {
-    word = `${char} ${word}${' '.repeat(biggestLength - word.length + 1)}${char}\n`;
-    return word;
+  const newStringList = stringList.map((word) => {
+    let wordRepeated = word;
+    wordRepeated = `${char} ${word}${' '.repeat(biggestLength - word.length + 1)}${char}\n`;
+    return wordRepeated;
   });
   const frameLimit = biggestLength;
   newStringList.unshift(`${char.repeat(frameLimit + 4)}\n`);

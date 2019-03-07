@@ -8,7 +8,7 @@ const isBalanced = (s, caps) => {
   if (chars === null) return true;
   // If is not even, is already false
   if (chars.length % 2 !== 0) return false;
-  let keysAndValues = new Map();
+  const keysAndValues = new Map();
   // Set the Map object (keysAndValues) with the pairs for openKeys and closeKeys, e.g. '()' becomes { '(' => ')' }
   caps.split('').forEach((cap, index) => {
     if (index % 2 === 0) {
@@ -22,13 +22,12 @@ const isBalanced = (s, caps) => {
     // If the current char is an open key, push it to the record
     if (keysAndValues.get(chars[i])) {
       currentOpenKey.push(chars[i]);
+    }
+    // Else, see if the last recorded open key has a closeKey value equal to the current char inside the loop
+    if (chars[i] === keysAndValues.get(currentOpenKey[currentOpenKey.length - 1])) {
+      currentOpenKey.pop();
     } else {
-      // Else, see if the last recorded open key has a closeKey value equal to the current char inside the loop
-      if (chars[i] === keysAndValues.get(currentOpenKey[currentOpenKey.length - 1])) {
-        currentOpenKey.pop();
-      } else {
-        return false;
-      }
+      return false;
     }
   }
   return true;

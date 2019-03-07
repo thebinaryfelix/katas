@@ -1,6 +1,6 @@
 // https://www.codewars.com/kata/simple-transposition
 
-const simpleTransposition = text => {
+const simpleTransposition = (text) => {
   let first = '';
   let second = '';
   for (let i = 0; i < text.length; i += 1) {

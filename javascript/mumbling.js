@@ -1,6 +1,6 @@
 // https://www.codewars.com/kata/mumbling
 
-const accum = s => {
+const accum = (s) => {
   let receivedString = s;
   let newS = '';
   receivedString = receivedString.toLowerCase();

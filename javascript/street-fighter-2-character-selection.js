@@ -3,9 +3,8 @@
 const streetFighterSelection = (fighters, position, moves) => {
   const hoveredChar = [];
   const newPos = position;
-  console.log(moves);
   const updateHovered = charPos => hoveredChar.push(fighters[charPos[1]][charPos[0]]);
-  moves.forEach(move => {
+  moves.forEach((move) => {
     switch (move) {
       case 'right':
         if (newPos[0] + 1 < fighters[0].length) {
